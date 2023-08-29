@@ -3,10 +3,6 @@ layout: post
 title: Unit Test User Secrets
 ---
 
-To Do: write an overview
-
-<!--more-->
-
 ## Configuration 
 
 - Right Click on Project, "Manage NuGet Packages"
