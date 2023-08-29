@@ -13,37 +13,37 @@ To Do: write an overview
 - Search for and install "Microsoft.Extensions.Configuration.UserSecrets"
 - Right Click on Project, "Manage User Secrets"
 - Add a test secret such as
-    ```
-    {
-        "Secret1": "Value1"
-    }
-    ```
+```
+{
+    "Secret1": "Value1"
+}
+```
 
 ## Initialization
 
 * Add a reference
-    ```
-    using Microsoft.Extensions.Configuration;
-    ```
+```
+using Microsoft.Extensions.Configuration;
+```
 
 * Create the configuration object
-    ```
-    IConfiguration Configuration { get; set; }
-    ```
+```
+IConfiguration Configuration { get; set; }
+```
 
 * Initialize and create the configuration object
-    ```
-    Configuration = new ConfigurationBuilder()
-        .AddUserSecrets<CompassIntegrationClientTests>()
-        .Build();
-    ```
+```
+Configuration = new ConfigurationBuilder()
+    .AddUserSecrets<CompassIntegrationClientTests>()
+    .Build();
+```
 
 * Get the configuration value
 
-    ```
-    var secret1 = Configuration["Secret1"];
-    Assert.Equal("Value1", secret1);
-    ```
+```
+var secret1 = Configuration["Secret1"];
+Assert.Equal("Value1", secret1);
+```
 
 
 
